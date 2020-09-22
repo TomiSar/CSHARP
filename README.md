@@ -1,2 +1,2 @@
 # CSHARP
-Repository for C# programming projects and Studying
+Repository for C# programming Projects, tutorials, Studying and unit testing
