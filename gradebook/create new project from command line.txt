@@ -1,0 +1,64 @@
+mkdir projectfolder
+
+inside projectfolder add folder
+mkdir src
+mkdir test
+
+inside src folder
+mkdir application //source code files etc..
+
+dotnet new (see the short name for creating desired .NET object or projectfolder for example Console Application)
+dotnet new console 
+
+inside test folder create unit tests  
+mkdir ProjectName.Tests
+cd ProjectName.Tests --> \test\ProjectName.Tests\ 
+dotnet new xunit
+https://www.nuget.org/ for packages 
+
+run project
+C:\Users\TS\source\repos\gradebook\src\GradeBook>dotnet run
+C:\Users\TS\source\repos\gradebook>dotnet run --project src\GradeBook\GradeBook.csproj
+
+run tests
+C:\Users\TS\source\repos\gradebook\test\GradeBook.Tests>dotnet test
+Test run for C:\Users\TS\source\repos\gradebook\test\GradeBook.Tests\bin\Debug\netcoreapp3.0\GradeBook.Tests.dll(.NETCoreApp,Version=v3.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.3.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+A total of 1 test files matched the specified pattern.
+
+Test Run Successful.
+Total tests: 9
+     Passed: 9
+ Total time: 0,9394 Seconds
+
+//add reference to access Book() class
+C:\Users\TS\source\repos\gradebook\test\GradeBook.Tests>dotnet add reference ..\..\src\GradeBook\GradeBook.csproj
+Reference `..\..\src\GradeBook\GradeBook.csproj` added to the project.
+public class Book()
+
+
+//Install these in GradeBook where Solution .sln file is
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+    <PackageReference Include="xunit.assert" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.execution" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
+
+
