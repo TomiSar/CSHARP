@@ -75,7 +75,7 @@ namespace GradeBook.Tests
 		//reference, not by value. The ref keyword makes the formal parameter an alias for the argument, which must be a variable
 		private void GetBookSetName(ref Book book, string name)
 		{
-			book = new Book(name);
+			book = new InMemoryBook(name);
 			book.Name = name;
 		}
 
@@ -91,7 +91,7 @@ namespace GradeBook.Tests
 		//
 		private void GetBookSetName(Book book, string name)
 		{
-			book = new Book(name);
+			book = new InMemoryBook(name);
 			book.Name = name;
 		}
 
@@ -156,7 +156,7 @@ namespace GradeBook.Tests
 
 		Book GetBook(string name)
 		{
-			return new Book(name); 
+			return new InMemoryBook(name); 
 		}
 	}
 }

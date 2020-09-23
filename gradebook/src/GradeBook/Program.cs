@@ -8,7 +8,7 @@ namespace GradeBook
         static void Main(string[] args)
 		{
 			//Create a new book for grades that holds values in merory
-			var book = new InMemoryBook("Scott's grade book");
+			var book = new DiskBook("Scott's grade book");
 			book.GradeAdded += OnGradeAdded;
 
 			Console.WriteLine("\n******************************************************************");
