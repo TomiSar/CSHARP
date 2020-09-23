@@ -4,22 +4,63 @@ using System.Linq;
 
 namespace GradeBook
 {//getter and setter prop, propg and propfull + tab
-	public class Book
-	{
-		public string Name;
-		private List<double> grades;
 
-		//constructor
-		public Book(string name)
+	//delagte to keep track on application logic with object.
+	//Event to Book when grade is added.
+	public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+	//Base class Everything inherits System.Object class <==> object
+	public class NamedObject 
+	{
+		public NamedObject(string name)
 		{
 			Name = name;
+		}
+
+		public string Name
+		{
+			get;
+			set;
+		}
+	}
+
+	public interface IBook
+	{
+		void AddGrade(double grade);
+		Statistics GetStatistics();
+		string Name { get; }
+		event GradeAddedDelegate GradeAdded;
+	}
+
+	public abstract class Book : NamedObject, IBook
+	{
+		public Book(string name) : base(name)
+		{
+		}
+
+		public virtual event GradeAddedDelegate GradeAdded;
+
+		public abstract void AddGrade(double grade);
+
+		public virtual Statistics GetStatistics()
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	//Defining A child class : Defining A parent class
+	public class InMemoryBook : Book
+	{
+		private List<double> grades;
+		//constructor
+		public InMemoryBook(string name) : base(name)
+		{
 			grades = new List<double>();
 		}
 
-		//a, b, c, d, e, f Grades
-		public void AddLetterGrade(char letter)
+		//A, B, C, D, E and F are grades
+		public void AddGrade(char letter)
 		{
-
 			switch (letter)
 			{
 				case 'A':
@@ -40,16 +81,21 @@ namespace GradeBook
 				default:
 					break;
 			}
-			
 		}
 
 		//Add grade to Grades List if grade 0-100
-		public void AddGrade(double grade)
+		//Method overrides Base class method
+		public override void AddGrade(double grade)
 		{
-
 			if (grade >= 0 && grade <= 100)
 			{
 				grades.Add(grade);
+
+				//If event = null no need to pass information =)
+				if (GradeAdded != null)
+				{
+					GradeAdded(this, new EventArgs());
+				} 
 			}
 			else 
 			{
@@ -57,7 +103,9 @@ namespace GradeBook
 			}
 		}
 
-		public Statistics GetStatistics()
+		public override event GradeAddedDelegate GradeAdded;
+
+		public override Statistics GetStatistics()
 		{
 			//new instance of Statisctics
 			var result = new Statistics();
@@ -92,7 +140,6 @@ namespace GradeBook
 					result.Letter = 'C';
 					break;
 			}
-
 			return result;
 		}
 	}
