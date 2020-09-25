@@ -1,0 +1,15 @@
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Method.CommonTest.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Method.CommonTest.pdb
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Methods.Common.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Methods.Common.pdb
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\obj\Debug\Method.CommonTest.csprojAssemblyReference.cache
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\obj\Debug\Method.CommonTest.csproj.CopyComplete
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\obj\Debug\Method.CommonTest.dll
+C:\Users\TS\source\repos\ACM\Tests\Method.CommonTest\obj\Debug\Method.CommonTest.pdb

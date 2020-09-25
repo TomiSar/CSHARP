@@ -1,0 +1,5 @@
+C:\Users\TS\source\repos\ACM\Methods.Common\bin\Debug\Methods.Common.dll
+C:\Users\TS\source\repos\ACM\Methods.Common\bin\Debug\Methods.Common.pdb
+C:\Users\TS\source\repos\ACM\Methods.Common\obj\Debug\Methods.Common.dll
+C:\Users\TS\source\repos\ACM\Methods.Common\obj\Debug\Methods.Common.pdb
+C:\Users\TS\source\repos\ACM\Methods.Common\obj\Debug\Method.Common.csprojAssemblyReference.cache
